@@ -1,7 +1,5 @@
 {-# LANGUAGE Haskell2010
-  , LambdaCase
   , ScopedTypeVariables
-  , TypeApplications
 #-}
 
 module Main
