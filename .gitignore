@@ -1,0 +1,8 @@
+.DS_Store
+.localized
+
+dist-newstyle
+
+docs
+dump
+prof
