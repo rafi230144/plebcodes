@@ -55,11 +55,3 @@ executable              plebcodes-bench
     hs-source-dirs:     bench
 
     main-is:            Main.hs
-
-    ghc-options:        -ddump-simpl
-                        -dno-typeable-binds
-                        -dsuppress-idinfo
-                        -dsuppress-coercions
-                        -dsuppress-type-applications
-                        -dsuppress-module-prefixes
-                        -ddump-to-file
