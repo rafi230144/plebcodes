@@ -1,0 +1,65 @@
+cabal-version:       3.0
+build-type:          Simple
+
+name:                plebcodes
+version:             0.1.0.0
+category:            misc
+synopsis:            LeetCode 1347 in Haskell
+
+author:              rafi230144
+license:             BSD-3-Clause
+license-file:        LICENSE
+
+extra-doc-files:     README.md
+
+source-repository    head
+    type:            git
+    location:        https://github.com/rafi230144/plebcodes
+
+
+-- * Common
+
+common                   common
+
+    build-depends:       base ^>= 4.21
+
+    default-language:    Haskell2010
+
+    ghc-options:         -Wall
+                         -fexpose-all-unfoldings
+                         -fspecialize-aggressively
+                         -O2
+
+
+-- * Library
+
+library
+
+    import:             common
+
+    build-depends:      primitive >= 0.9.1 && < 0.10
+
+    hs-source-dirs:     src
+
+    exposed-modules:    Solution
+
+
+-- * Benchmark
+
+executable              plebcodes-bench
+
+    import:             common
+    
+    build-depends:      plebcodes
+
+    hs-source-dirs:     bench
+
+    main-is:            Main.hs
+
+    ghc-options:        -ddump-simpl
+                        -dno-typeable-binds
+                        -dsuppress-idinfo
+                        -dsuppress-coercions
+                        -dsuppress-type-applications
+                        -dsuppress-module-prefixes
+                        -ddump-to-file
